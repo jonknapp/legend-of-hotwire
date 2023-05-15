@@ -43,7 +43,7 @@
                     css.exec = "yarn build:css --watch";
                     js.exec = "yarn build --watch=forever";
                     web.exec = "unset PORT && bin/rails server";
-                    # worker.exec = "bundle exec sidekiq -t 5";
+                    worker.exec = "bundle exec sidekiq -t 10";
                   };
 
                   services.postgres.enable = true;
