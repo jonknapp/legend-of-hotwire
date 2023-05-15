@@ -40,10 +40,10 @@
 
                   process.implementation = "overmind";
                   processes = {
-                    # css.exec = "yarn build:css --watch";
-                    # js.exec = "yarn build --watch=forever";
-                    # web.exec = "unset PORT && bin/rails server";
-                    # worker.exec = "bundle exec sidekiq -t 25";
+                    css.exec = "yarn build:css --watch";
+                    js.exec = "yarn build --watch=forever";
+                    web.exec = "unset PORT && bin/rails server";
+                    # worker.exec = "bundle exec sidekiq -t 5";
                   };
 
                   services.postgres.enable = true;
