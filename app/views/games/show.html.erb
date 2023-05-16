@@ -1,5 +1,6 @@
 <%= link_to 'Back', games_path %>
 
+<%= turbo_stream_from dom_id(@game) %>
 <%= render @game %>
 
 <div>

@@ -23,6 +23,7 @@ class GamesController < ApplicationController
     @game = Game.new(game_create_params)
 
     if @game.save
+      Turbo::StreamsChannel.broadcast_prepend_later_to :games, target: 'games', partial: 'games/meta', locals: { game: @game }
       redirect_to @game, notice: "Game was successfully created."
     else
       render :new, status: :unprocessable_entity
@@ -32,6 +33,7 @@ class GamesController < ApplicationController
   # DELETE /games/1
   def destroy
     @game.destroy
+    Turbo::StreamsChannel.broadcast_remove_to :games, target: dom_id(@game, :meta)
     redirect_to games_url, notice: "Game was successfully destroyed."
   end
 
