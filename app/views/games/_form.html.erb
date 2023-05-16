@@ -1,0 +1,12 @@
+<%= form_with(model: game) do |form| %>
+  <%= render 'shared/form_errors', model: form.object %>
+
+  <div>
+    <%= form.label :seed, style: "display: block" %>
+    <%= form.text_field :seed %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

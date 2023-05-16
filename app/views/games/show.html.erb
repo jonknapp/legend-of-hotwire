@@ -1,0 +1,7 @@
+<%= link_to 'Back', games_path %>
+
+<%= render @game %>
+
+<div>
+  <%= button_to "Destroy this game", @game, method: :delete, data: { turbo: false } %>
+</div>

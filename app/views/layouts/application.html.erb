@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LegendOfHotwire</title>
+    <title>Legend of Hotwire</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body data-turbo="true">
+    <div class="content-wrapper">
+      <% if notice.present? %>
+        <p style="color: var(--color-accent)"><%= notice %></p>
+      <% end %>
+      <%= yield %>
+      <footer id="footer">
+        <span data-controller="timer"></span>
+      </footer>
+    </div>
   </body>
 </html>

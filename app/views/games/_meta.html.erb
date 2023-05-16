@@ -1,0 +1,7 @@
+<%= tag.div id: dom_id(game, :meta) do %>
+  <p>ID: <%= game.id %></p>
+  <p><small>Seed: <%= game.seed %></small></p>
+  <%= render partial: 'games/ship_info', locals: { game: } %>
+  <p><%= link_to "Show this game", game %></p>
+  <hr />
+<% end %>

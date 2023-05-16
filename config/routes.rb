@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root to: 'homes#show'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resource :home, only: [:show]
+  resources :games do
+    resource :guess, only: [:create], module: 'games'
+  end
 end

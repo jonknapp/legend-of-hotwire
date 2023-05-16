@@ -1,0 +1,17 @@
+.turbo-progress-bar {
+  align-items: center;
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  display: flex;
+  font-size: 2em;
+  font-weight: bold;
+  height: 50px;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+
+.turbo-progress-bar::after {
+  content: 'Hey! Listen!!!!';
+}

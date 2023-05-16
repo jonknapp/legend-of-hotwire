@@ -1,0 +1,34 @@
+@supports (selector(html:has(body))) {
+  body:has(#modal > div) #content {
+    filter: blur(2px);
+  }
+}
+
+.modal-backdrop {
+  background-color: #101110;
+  height: 100%;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.modal-content-wrapper {
+  background-color: white;
+  height: 100%;
+  width: min(600px, 100%);
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  left: 0;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}

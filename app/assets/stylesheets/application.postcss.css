@@ -1,1 +1,16 @@
-/* Entry point for your PostCSS build */
+@import "./base.css";
+@import "./board.css";
+@import "./modal.css";
+@import "./turbo.css";
+
+:root {
+  --color-background: #e9f0e7;
+  --color-accent: #38761d;
+  --color-text: white;
+  --color-warning: rgb(163, 18, 18);
+}
+
+.content-wrapper {
+  max-width: 600px;
+  width: 100%;
+}

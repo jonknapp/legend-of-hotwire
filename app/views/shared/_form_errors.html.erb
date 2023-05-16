@@ -1,0 +1,11 @@
+<% if model.errors.any? %>
+  <div style="color: var(--color-warning)">
+    <h2><%= pluralize(model.errors.count, "error") %> prohibited this <%= model.model_name.human.downcase %> from being saved:</h2>
+
+    <ul>
+      <% model.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

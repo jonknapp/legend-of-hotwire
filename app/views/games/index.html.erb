@@ -1,0 +1,11 @@
+<%= link_to 'Back', root_path %>
+<h1>Games</h1>
+
+<%= link_to "New game", new_game_path %>
+<%= paginate @games %>
+
+<div id="games">
+  <%= render 'collection' %>
+</div>
+
+<%= paginate @games %>

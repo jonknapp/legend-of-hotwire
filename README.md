@@ -1,24 +1,17 @@
-# README
+# Legend of Hotwire
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Demo Steps
 
-Things you may want to cover:
+- page cache and loading indicator
+- disable turbo with attribute on `<body>`
+- `data-turbo-submits-with` for form submit button text
+- `data-turbo-temporary` to cleanup prior to page cache
+- `data-turbo-persistent` timer
+- turbo stream response for guesses
+- turbo stream websocket responses for new/updated/deleted games
+- lazy loading paginated results
+- modal page variant
 
-* Ruby version
+## Development
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`devenv up`

@@ -1,0 +1,29 @@
+[hidden] {
+  display: none !important;
+}
+
+body {
+  align-items: center;
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  font-family: serif;
+  font-size: 120%;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+del {
+  text-decoration: line-through;
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-accent);
+  font-family: 'Alfa Slab One', serif;
+}
+
+.nowrap {
+  white-space: nowrap;
+}

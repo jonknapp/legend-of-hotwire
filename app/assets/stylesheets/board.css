@@ -1,0 +1,31 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.board--row {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: stretch;
+}
+
+.board--cell {
+  align-items: center;
+  display: flex;
+  font-size: 40px;
+  line-height: 1;
+  width: 48px;
+}
+
+.board--cell form {
+  width: 100%;
+}
+
+.board--cell form > button {
+  font-size: 35px;
+  height: 100%;
+  width: 100%;
+}

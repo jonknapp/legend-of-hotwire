@@ -1,0 +1,9 @@
+<ul>
+  <% game.ships.keys.sort.each do |ship_key| %>
+    <li>
+      <% if game.ships[ship_key][:damage] == game.ships[ship_key][:length] %><del><% end %>
+      <%= ship_key.humanize %>: <%= game.ships[ship_key][:damage] %> of <%= game.ships[ship_key][:length] %>
+      <% if game.ships[ship_key][:damage] == game.ships[ship_key][:length] %></del><% end %>
+    </li>
+  <% end %>
+</ul>
