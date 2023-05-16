@@ -1,0 +1,7 @@
+<%= turbo_stream.append 'footer' do %>
+  <%= tag.audio autoplay: true, controls: false, data: { controller: 'autoremove', turbo_temporary: true }, src: @sound_path %>
+<% end %>
+
+<%= turbo_stream.update @game do %>
+  <%= render partial: 'games/game', locals: { game: @game } %>
+<% end %>
