@@ -3,3 +3,6 @@
 // ./bin/rails generate stimulus controllerName
 
 import { application } from "./application";
+
+import TimerController from "./timer_controller";
+application.register("timer", TimerController);
