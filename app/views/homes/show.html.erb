@@ -1,4 +1,11 @@
 <h1>Kerboom!</h1>
 
-<p><%= link_to 'Play a Game', new_game_path %></p>
-<p><%= link_to 'View Games', games_path %></p>
+<%= link_to 'Play a Game', new_game_path %>
+
+<details>
+  <summary>Recent Games</summary>
+
+  <%= turbo_frame_tag 'games_container', loading: 'lazy', src: games_path do %>
+    <img src="https://i.pinimg.com/originals/65/fb/cb/65fbcb19ae1ffdd6dfee1b7bed7a0057.gif">
+  <% end %>
+</details>

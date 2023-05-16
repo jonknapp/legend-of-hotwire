@@ -1,0 +1,5 @@
+<%= turbo_stream.append 'games', partial: 'games/collection', locals: { games: @games } %>
+
+<% if params.fetch('page', '1').to_i + 1 <= @games.total_pages %>
+  <%= turbo_stream.replace 'infinite_scroll', partial: 'games/scroll_frame', locals: { page: params.fetch('page', '1').to_i + 1 } %>
+<% end %>

@@ -2,6 +2,6 @@
   <p>ID: <%= game.id %></p>
   <p><small>Seed: <%= game.seed %></small></p>
   <%= render partial: 'games/ship_info', locals: { game: } %>
-  <p><%= link_to "Show this game", game %></p>
+  <p><%= link_to "Show this game", game, data: { turbo_frame: '_top' } %></p>
   <hr />
 <% end %>

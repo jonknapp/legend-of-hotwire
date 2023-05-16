@@ -6,8 +6,11 @@
 <%= link_to "New game", new_game_path %>
 <%= paginate @games %>
 
-<div id="games">
-  <%= render 'collection' %>
-</div>
+<%= turbo_frame_tag 'games_container' do %>
+  <div id="games">
+    <%= render 'collection' %>
+  </div>
+  <%= render 'scroll_frame', page: params.fetch('page', '1').to_i + 1 %>
+<% end %>
 
 <%= paginate @games %>

@@ -7,6 +7,11 @@ class GamesController < ApplicationController
   # GET /games
   def index
     @games = Game.all.page(params[:page])
+
+    respond_to do |format|
+      format.html
+      format.turbo_stream
+    end
   end
 
   # GET /games/1
