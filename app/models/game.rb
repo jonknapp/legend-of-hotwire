@@ -4,9 +4,12 @@ class Game < ApplicationRecord
 
   self.implicit_order_column = :created_at
 
+  attr_accessor :links_memory
+
   before_validation :generate_seed
   before_validation :populate_board
 
+  validates :links_memory, presence: true
   validates :seed, presence: true
 
   def number_of_guesses

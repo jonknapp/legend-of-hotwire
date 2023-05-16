@@ -16,10 +16,10 @@
   <body data-turbo="true">
     <div class="content-wrapper">
       <% if notice.present? %>
-        <p style="color: var(--color-accent)"><%= notice %></p>
+        <p data-turbo-temporary style="color: var(--color-accent)"><%= notice %></p>
       <% end %>
       <%= yield %>
-      <footer id="footer">
+      <footer data-turbo-permanent id="footer">
         <span data-controller="timer"></span>
       </footer>
     </div>
