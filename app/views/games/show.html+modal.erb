@@ -1,0 +1,13 @@
+<%= turbo_frame_tag 'modal' do %>
+  <%= turbo_stream_from dom_id(@game) %>
+
+  <div class="modal-wrapper">
+    <div class="modal-backdrop" data-action="click->navigate#back" data-controller="navigate"></div>
+    <div class="modal-content-wrapper">
+      <div class="modal-content">
+        <%= link_to 'X', games_path, data: { action: 'click->navigate#back', controller: 'navigate' } %>
+        <%= render @game %>
+      </div>
+    </div>
+  </div>
+<% end %>

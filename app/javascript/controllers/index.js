@@ -7,5 +7,8 @@ import { application } from "./application";
 import AutoremoveController from "./autoremove_controller";
 application.register("autoremove", AutoremoveController);
 
+import NavigateController from "./navigate_controller";
+application.register("navigate", NavigateController);
+
 import TimerController from "./timer_controller";
 application.register("timer", TimerController);
